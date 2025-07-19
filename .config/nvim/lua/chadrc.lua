@@ -6,7 +6,7 @@
 local M = {}
 
 M.base46 = {
-	theme = "onedark",
+	theme = "catppuccin",
 
 	-- hl_override = {
 	-- 	Comment = { italic = true },
@@ -20,5 +20,26 @@ M.base46 = {
 --          lazyload = false
 --      }
 --}
+
+-- Packages for mason to ensure that they are installed
+M.mason = {
+  pkgs = {
+    -- LSPs
+    "pyright",
+    "rust-analyzer",
+    "cmake-language-server",
+    "css-lsp",
+    "docker-compose-language-service",
+    "dockerfile-language-server",
+    "gopls",
+    "html-lsp",
+    "htmx-lsp",
+    -- Linter
+    "mypy",
+    -- Formatters
+    "stylua",
+    "ruff",
+  }
+}
 
 return M

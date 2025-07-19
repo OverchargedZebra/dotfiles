@@ -10,19 +10,59 @@ return {
     "neovim/nvim-lspconfig",
     config = function()
       require "configs.lspconfig"
+      require "custom.configs.lspconfig"
     end,
+  },
+
+  -- Tree sitter plugins options
+
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "vim", "lua", "luadoc",
+        "vim", "vimdoc", "printf",
+        "html", "css", "c",
+        "cpp", "javascript", "typescript",
+        "go", "rust", "python",
+        "markdown", "markdown_inline", "query",
+        "sql",
+      },
+    },
   },
 
   -- test new blink
   -- { import = "nvchad.blink.lazyspec" },
 
-  -- {
-  -- 	"nvim-treesitter/nvim-treesitter",
-  -- 	opts = {
-  -- 		ensure_installed = {
-  -- 			"vim", "lua", "vimdoc",
-  --      "html", "css"
-  -- 		},
-  -- 	},
-  -- },
+  {
+    "williamboman/mason.nvim",
+    opts = {
+      ensure_installed = {
+        -- LSPs
+        "pyright",
+        "rust-analyzer",
+        "cmake-language-server",
+        "css-lsp",
+        "docker-compose-language-service",
+        "dockerfile-language-server",
+        "gopls",
+        "html-lsp",
+        "htmx-lsp",
+        -- Linter
+        "mypy",
+        -- Formatters
+        "stylua",
+        "ruff",
+      },
+    },
+  },
+
+  -- plugins to setup static analysis
+  {
+    "jose-elias-alvarez/null-ls.nvim",
+    ft = {"python"},
+    opts = function()
+      return require "custom.configs.null-ls"
+    end,
+  },
 }
