@@ -10,7 +10,6 @@ return {
     "neovim/nvim-lspconfig",
     config = function()
       require "configs.lspconfig"
-      require "custom.configs.lspconfig"
     end,
   },
 
@@ -48,21 +47,15 @@ return {
         "gopls",
         "html-lsp",
         "htmx-lsp",
+        -- DAP
+        "debugpy",
         -- Linter
         "mypy",
         -- Formatters
         "stylua",
         "ruff",
+        "black",
       },
     },
-  },
-
-  -- plugins to setup static analysis
-  {
-    "jose-elias-alvarez/null-ls.nvim",
-    ft = {"python"},
-    opts = function()
-      return require "custom.configs.null-ls"
-    end,
   },
 }
