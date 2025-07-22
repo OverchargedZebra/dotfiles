@@ -21,24 +21,4 @@ M.base46 = {
 --      }
 --}
 
--- Packages for mason to ensure that they are installed
-M.mason = {
-  pkgs = {
-    -- LSPs
-    "pyright",
-    "rust-analyzer",
-    "cmake-language-server",
-    "css-lsp",
-    "docker-compose-language-service",
-    "dockerfile-language-server",
-    "gopls",
-    "html-lsp",
-    "htmx-lsp",
-    -- DAP
-    -- Linter
-    -- Formatters
-    "stylua",
-  }
-}
-
 return M

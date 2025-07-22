@@ -7,7 +7,8 @@ local servers = {
   "dockerls",
   "docker_compose_language_service",
   "gopls",
-  "htmx",
+  -- "htmx",
+  "marksman",
   "lua_ls",
   "pyright",
   "rust_analyzer",
@@ -17,3 +18,4 @@ vim.lsp.enable(servers)
 
 -- vim.lsp.config("cmake-language-server")
 -- read :h vim.lsp.config for changing options of lsp servers 
+
