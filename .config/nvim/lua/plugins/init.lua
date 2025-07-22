@@ -48,13 +48,9 @@ return {
         "html-lsp",
         "htmx-lsp",
         -- DAP
-        "debugpy",
         -- Linter
-        "mypy",
         -- Formatters
         "stylua",
-        "ruff",
-        "black",
       },
     },
   },
