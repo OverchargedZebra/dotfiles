@@ -21,4 +21,12 @@ M.base46 = {
 --      }
 --}
 
+M.ui = {
+  -- used to make the tree on the right side of the screen
+  -- this part of the code places the tree offset on the right
+  tabufline = {
+    order = {"buffers", "tabs", "btns", "treeOffset"}
+  },
+}
+
 return M
