@@ -29,4 +29,24 @@ M.ui = {
   },
 }
 
+M.mason = {
+  pkgs = {
+    -- LSPs
+    "pyright",
+    "rust-analyzer",
+    "cmake-language-server",
+    "css-lsp",
+    "docker-compose-language-service",
+    "dockerfile-language-server",
+    "gopls",
+    "html-lsp",
+    -- "htmx-lsp",
+    "marksman",
+    -- DAP
+    -- Linter
+    -- Formatter
+    "stylua",
+  }
+}
+
 return M
