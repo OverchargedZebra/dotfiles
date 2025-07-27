@@ -6,7 +6,6 @@ local servers = {
   "cmake",
   "dockerls",
   "docker_compose_language_service",
-  "gopls",
   -- "htmx",
   "marksman",
   "lua_ls",

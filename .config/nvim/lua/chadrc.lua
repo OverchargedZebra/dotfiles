@@ -21,6 +21,7 @@ M.base46 = {
 --      }
 --}
 
+
 M.ui = {
   -- used to make the tree on the right side of the screen
   -- this part of the code places the tree offset on the right
@@ -30,23 +31,7 @@ M.ui = {
 }
 
 M.mason = {
-  pkgs = {
-    -- LSPs
-    "pyright",
-    "rust-analyzer",
-    "cmake-language-server",
-    "css-lsp",
-    "docker-compose-language-service",
-    "dockerfile-language-server",
-    "gopls",
-    "html-lsp",
-    -- "htmx-lsp",
-    "marksman",
-    -- DAP
-    -- Linter
-    -- Formatter
-    "stylua",
-  }
+  pkgs = require("plugins.mason").opts.ensure_installed
 }
 
 return M
